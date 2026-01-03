@@ -680,7 +680,7 @@ input[type="radio"] {
 }
 
 /* L'arrière-plan noir transparent qui couvre tout l'écran */
-.modal-overlay {
+.modal-arriere {
     display: none; /* Cache par défaut */
     position: fixed;/*la fenetre ne bouge pas tant qu'on la ferme pas*/
     top: 0;
@@ -695,7 +695,7 @@ input[type="radio"] {
 }
 
 /* Affiche la fenêtre quand on clique sur le lien */
-.modal-overlay:target {
+.modal-arriere:target {
     display: flex;
 }
 
@@ -741,59 +741,56 @@ input[type="radio"] {
 /* Style des titres bleus comme dans Expériences */
 .modal-content .exp-label {
     font-weight: bold;
-    color: #ff00c8;
-    text-transform: uppercase;
+    color: #5e8d9e;
+}
+
+.modal-content video {
+    display: block; /* Transforme la vidéo en bloc pour qu'elle accepte les marges auto */
+    margin-left: auto; /* Pousse à gauche */
+    margin-right: auto; /* Pousse à droite et la vidéo se retrouve au milieu */
+    border-radius: 8px;
 }
 
 /* Style du bouton "Voir le projet" */
 .bouton-projet {
-    display: inline-block;
+    display: inline-block; /*structure de la page pour rester sur la ligne*/
     padding: 10px 20px;
-    background: linear-gradient(45deg, #AEC6CF, #97b5be); /* Ton bleu pastel */
-    color: white !important;
-    text-decoration: none !important;
-    border-radius: 25px;
+    background: linear-gradient(45deg, #AEC6CF, #97b5be); /* fond bleu en degrade */
+    color: white; /*couleur de texte*/
+    text-decoration: none; /*enleve les soulignements*/
+    border-radius: 25px; /*arrondis les cotes*/
     font-weight: bold;
     margin-top: 15px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease; /*rajoute une animation au survol*/
+    cursor: pointer; /*change la souris*/
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*rajoute une ombre*/
 }
 
 .bouton-projet:hover {
     background: #FFC3CB; /* Rose pastel au survol */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    color: white !important;
+    transform: translateY(-2px); /*le bouton monte de 2 px en survol*/
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /*son ombre devient plus grand*/
 }
-
-
-
-
 
 /*Phtos dans le projet Portfolio*/
-
 .container-images {
     display: flex;
-    justify-content: center; /* Centre les deux photos horizontalement */
-    gap: 20px;               /* Ajoute un espace entre les deux photos */
-    align-items: center;     /* Aligne les photos verticalement si elles n'ont pas la même hauteur */
+    justify-content: center;/* Centre les deux photos horizontalement */
+    gap: 20px;  /* Ajoute un espace entre les deux photos */
+    align-items: center; /* Aligne les photos verticalement si elles n'ont pas la même hauteur */
 }
 
-/* On stylise les images pour qu'elles gardent la même taille */
+/* stylysation des images pour qu'elles gardent la même taille */
 .code img {
-    max-width: 420px;
-    width: 100%;             /* Force l'image à prendre la largeur de son parent .code */
-    height: auto;            /* Garde les proportions */
+    max-width: 420px; /*limite la lageur*/
+    width: 100%;  /* Force l'image à prendre la largeur de son parent .code */
     display: block;
-    border-radius: 8px;      /* Optionnel : pour arrondir un peu les coins comme sur ton autre code */
+    border-radius: 8px; /* arrondis les coins */
 }
 
 
 
-/*centre d'interets*/
-/*langues*/
+/* 7. Centres d'interet*/
 .hobby-liste {
     display: flex;
     flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
@@ -805,19 +802,18 @@ input[type="radio"] {
 .hobby-item {
     background-color: #dde8eb; /* Fond très légèrement bleuté */
     border: 2px solid  #759ca8; /* Bordure Bleu Pastel */
-    border-radius: 10px;
+    border-radius: 10px; /*arrondis les cotes*/
     padding: 25px;
-    width: calc(50% - 37px); /* 3 cartes par ligne sur grand écran */
-    min-height: 200px; /* Hauteur minimale pour l'uniformité */
-    display: flex;
+    width: calc(50% - 37px); /* 3 cartes par ligne */
+    min-height: 200px; /* Hauteur minimale pour de la carte */
+    display: flex; /*structure de la page en flex*/
     flex-direction: column;
-    align-items: center;
+    align-items: center; /*alignement des elements*/
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /*ombre*/
 }
 
-
+/*titre de hobby*/
 .hobby-item h4 {
     font-size: 20px;
     font-weight: 700;
@@ -825,25 +821,24 @@ input[type="radio"] {
     margin-bottom: 10px;
 }
 
+/*description de la carte*/
 .hobby-item p {
     font-size: 14px;
     color: #667;
     line-height: 1.5;
 }
 
-
-/*Boutons pour les centres d'interets*/
+/*Boutons pour les cartes*/
 .bouton-interet {
     display: inline-block;
     padding: 10px 20px;
     background: linear-gradient(45deg, #AEC6CF, #97b5be); /* Ton bleu pastel */
-    color: white !important;
-    text-decoration: none !important;
+    color: white;
+    text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
     margin-top: 15px;
     transition: all 0.3s ease;
-    border: none;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -852,14 +847,16 @@ input[type="radio"] {
     background: #FFC3CB; /* Rose pastel au survol */
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    color: white !important;
+    color: white;
 }
 
+/*couleurs de nom de centre d'interet*/
+.titre-loisir{
+    color: #AEC6CF;
+}
 
-
-
-/*pages des musique*/
-/* Cache les boutons radio */
+/*Page Musique*/
+/* bouton radio caches */
 input[name="music-page"] {
     display: none;
 }
@@ -867,15 +864,14 @@ input[name="music-page"] {
 /* Conteneur principal */
 .pagination-container {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Empêche le contenu de déborder */
     width: 100%;
     min-height: 300px;
 }
 
 /* Gestion de l'affichage des pages */
 .music-page {
-    display: none; /* Cache toutes les pages par défaut */
-    animation: fadeIn 0.5s ease-out;
+    display: none; /* Toutes les pages sont masquées au départ */
 }
 
 /* Affiche la page correspondante au bouton radio coché */
@@ -883,25 +879,23 @@ input[name="music-page"] {
 #page2:checked ~ .pages-wrapper #p2,
 #page3:checked ~ .pages-wrapper #p3,
 #page4:checked ~ .pages-wrapper #p4 {
-    display: block;
+    display: block; /*la page devient visible*/
 }
 
-/* Style des flèches/boutons de navigation */
+/* Style des flèches/boutons de navigation dans la fenetre*/
 .nav-arrows {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*place un bouton a gauch et un autre a droite*/
     padding: 10px 0;
 }
 
 .nav-arrows label {
-    background: #AEC6CF; /* Ton bleu pastel */
+    background: #AEC6CF;
     color: white;
     padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
+    border-radius: 20px; /*cotes arrondis*/
+    cursor: pointer; /*change le curseur*/
     font-size: 14px;
-    transition: 0.3s ease;
-    user-select: none;
 }
 
 .nav-arrows label:hover {
@@ -909,57 +903,47 @@ input[name="music-page"] {
     color: #4A4A4A;
 }
 
-/* Aligner le bouton "Suivant" à droite s'il est seul sur la page 1 */
+/* Aligne le bouton "Suivant" à droite s'il est seul sur la page 1 */
 #p1 .nav-arrows {
     justify-content: flex-end;
 }
 
-/* Animation de transition */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.titre-loisir{
-    color: #AEC6CF;
+#p4 .nav-arrows {
+    justify-content: flex-start; /* Le bouton "Précédent" reste à gauche sur la page 4*/
 }
 
 
-
-
-
-
-
-/* BOUTON CV */
+/*8.  CV*/
 .download-btn {
-    display: inline-block;
-    /* Dégradé de Bleu */
+    display: inline-block; /*elements restent sur la meme ligne*/
     background: linear-gradient(45deg, #AEC6CF, #97b5be); 
     color: #4A4A4A;
     padding: 12px 25px;
-    border-radius: 8px;
-    border: none;
-    text-decoration: none;
+    border-radius: 8px; /*coins arrondis*/
+    text-decoration: none; /*enleve le soulignement de texte*/
     font-weight: 600;
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*ombre*/
+    transition: all 0.3s ease; /*animation au survol*/
 }
 
 .download-btn:hover {
-    background: linear-gradient(45deg, #97b5be, #AEC6CF);
-    transform: translateY(-3px) scale(1.03);
+    background: linear-gradient(45deg, #97b5be, #AEC6CF); /*on change les sens de couleurs d'avant*/
+    transform: translateY(-3px) scale(1.03); /*animation au survol*/
     color: #2c2c2c;
 }
 
 
-/* Contact */
+
+/* 9. Contact */
+/*texte dans l'onglet*/
 .contact-panel p {
     font-size: 17px;
     margin-bottom: 10px;
 }
 
+/*style des illustrations*/
 .contact-panel strong i {
-    color: #AEC6CF; /* COULEUR BLEU PASEL */
+    color: #AEC6CF;
     margin-right: 8px;
 }
