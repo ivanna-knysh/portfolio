@@ -282,6 +282,174 @@ a.lien:hover{
 
 
 
+/* 5. Competences*/
+/*division en 3 cathegories: competences, qualites, langues*/
+.skills-container {
+    display: flex; /*structure de la page en colonnes*/
+    flex-direction: column;
+    gap: 25px; /* Espace entre chaque compétence */
+    padding: 15px 0;
+}
+
+/*les groupes des competences*/
+.skill-item p {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4A4A4A;
+}
+
+/*la partie vide de la barrre*/
+.skill-bar {
+    width: 100%; /*prend toute la largeur de l'ecran*/
+    height: 15px;
+    background-color: #f0f0f0; /* Fond gris clair*/
+    border-radius: 8px; /*coins arrondis*/
+    overflow: hidden; /* remplissage doit pas depasser les bords arrondis */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /*ombre a l'interieur de la barre*/
+}
+
+/*la partie remplie de la barre*/
+.skill-level {
+    height: 100%; /*hauteur comme la barre grise*/
+    color: white; /* Texte en blanc pour le pourcentage */
+    display: flex;
+    align-items: center; /*centre le texte verticalement*/
+    justify-content: flex-end; /* Texte du pourcentage à droite de la barre */
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 8px 0 0 8px; /*arrondis les cotes*/
+}
+
+/* Définition des niveaux de compétence spécifiques */
+.prog-level {
+    width: 60%;
+    background-color: #AEC6CF; 
+}
+
+.reseaux-level {
+    width: 25%;
+    background-color: #5e8d9e; 
+}
+
+.syst-level {
+    width: 25%;
+    background-color: #FFC3CB;
+}
+
+.telecom-level {
+    width: 20%;
+    background-color: #AEC6CF; 
+}
+
+/*texte expliquatif pour chaque competence*/
+.compets{
+    font-size: smaller;
+    color: #5e8d9e;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 50%;
+    border: #6993a255;
+    border-radius: 5px;
+    border-style: solid;
+    text-align: justify;
+    padding: 8px;
+}
+
+
+/* Qualites*/
+.qualities-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si ya pas de place */
+    justify-content: center; /* Centre les cartes horizontalement */
+    gap: 25px; /* Espace entre les cartes */
+    padding: 20px 0;
+}
+
+.quality-card {
+    background-color: #f6faff; /* Fond légèrement bleuté */
+    border: 2px solid #AEC6CF; /* Bordure Bleu Pastel */
+    border-radius: 10px; /*arrondis les cotes*/
+    padding: 25px;
+    width: calc(33.333% - 25px); /* calcule la largeur pour mettre 3 cartes par ligne sur grand écran (100%/3 = 33.3%) */
+    min-height: 200px; /* Hauteur minimale pour les cartes */
+    display: flex; /*structure de la page en colonne*/
+    flex-direction: column;
+    align-items: center; /*centre tout le contenu*/
+    text-align: center; /*centre le texte*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /*rajoute une ombre*/
+}
+
+/*2 autres cartes mises en place*/
+.wide-card {
+    width: calc(50% - 25px);
+}
+
+/*illustration dans les cartes*/
+.card-icon {
+    font-size: 40px;
+    color: #AEC6CF;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/*les titres dans les cartes*/
+.quality-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4A4A4A;
+    margin-bottom: 10px;
+}
+
+/*texte dans les cartes*/
+.quality-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/*Langues*/
+/*la meme structure que les qualites*/
+.langues-liste {
+    display: flex; /*structure les elements dans la page*/
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+    justify-content: center; /* Centre les cartes horizontalement */
+    gap: 25px; /* Espace entre les cartes */
+    padding: 20px 0;
+}
+
+.langue-item {
+    background-color: #fff0f2;
+    border: 2px solid #FFC3CB;
+    border-radius: 10px;/*arrondis les cotes*/
+    padding: 25px;
+    width: calc(33.333% - 25px); /* 3 cartes par ligne sur grand écran */
+    min-height: 200px; /* Hauteur minimale pour l'uniformité */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/*nom des langues*/
+.langue-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4A4A4A;
+    margin-bottom: 10px;
+}
+
+/*texte explicatif*/
+.langue-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5; /*interligne*/
+}
+
+
+
 /* 6. Experience */
 /*division de la page en 2*/
 .experience-grid {
@@ -427,8 +595,7 @@ input[type="radio"] {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*rajoute ombre*/
 }
 
-
-/* Style pour les labels (Titre:, Contexte:, Objectif:, etc.) dans la section Expérience */
+/* Style pour les labels (Titre:, Contexte:, Objectif:, etc.)*/
 .exp-label {
     font-weight: bold; /* Rend le texte en gras */
     text-decoration: underline; /* Souligne le texte */
@@ -481,177 +648,7 @@ input[type="radio"] {
 
 
 
-/* 5. Competences*/
-/*division en 3 cathegories: competences, qualites, langues*/
-.skills-container {
-    display: flex; /*structure de la page en colonnes*/
-    flex-direction: column;
-    gap: 25px; /* Espace entre chaque compétence */
-    padding: 15px 0;
-}
-
-/*les groupes des competences*/
-.skill-item p {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #4A4A4A;
-}
-
-/*la partie vide de la barrre*/
-.skill-bar {
-    width: 100%; /*prend toute la largeur de l'ecran*/
-    height: 15px;
-    background-color: #f0f0f0; /* Fond gris clair*/
-    border-radius: 8px; /*coins arrondis*/
-    overflow: hidden; /* remplissage doit pas depasser les bords arrondis */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /*ombre a l'interieur de la barre*/
-}
-
-/*la partie remplie de la barre*/
-.skill-level {
-    height: 100%; /*hauteur comme la barre grise*/
-    color: white; /* Texte en blanc pour le pourcentage */
-    display: flex;
-    align-items: center; /*centre le texte verticalement*/
-    justify-content: flex-end; /* Texte du pourcentage à droite de la barre */
-    padding-right: 10px;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 8px 0 0 8px; /*arrondis les cotes*/
-}
-
-/* Définition des niveaux de compétence spécifiques */
-.prog-level {
-    width: 60%;
-    background-color: #AEC6CF; 
-}
-
-.reseaux-level {
-    width: 25%;
-    background-color: #5e8d9e; 
-}
-
-.syst-level {
-    width: 25%;
-    background-color: #FFC3CB;
-}
-
-.telecom-level {
-    width: 20%;
-    background-color: #AEC6CF; 
-}
-
-/*texte expliquatif pour chaque competence*/
-.compets{
-    font-size: smaller;
-    color: #5e8d9e;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 50%;
-    border: #6993a255;
-    border-radius: 5px;
-    border-style: solid;
-    text-align: justify;
-    padding: 8px;
-}
-
-
-
-/* Qualites*/
-.qualities-grid {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si ya pas de place */
-    justify-content: center; /* Centre les cartes horizontalement */
-    gap: 25px; /* Espace entre les cartes */
-    padding: 20px 0;
-}
-
-.quality-card {
-    background-color: #f6faff; /* Fond légèrement bleuté */
-    border: 2px solid #AEC6CF; /* Bordure Bleu Pastel */
-    border-radius: 10px; /*arrondis les cotes*/
-    padding: 25px;
-    width: calc(33.333% - 25px); /* calcule la largeur pour mettre 3 cartes par ligne sur grand écran (100%/3 = 33.3%) */
-    min-height: 200px; /* Hauteur minimale pour les cartes */
-    display: flex; /*structure de la page en colonne*/
-    flex-direction: column;
-    align-items: center; /*centre tout le contenu*/
-    text-align: center; /*centre le texte*/
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /*rajoute une ombre*/
-}
-
-/*2 autres cartes mises en place*/
-.wide-card {
-    width: calc(50% - 25px);
-}
-
-/*illustration dans les cartes*/
-.card-icon {
-    font-size: 40px;
-    color: #AEC6CF;
-    margin-bottom: 15px;
-    padding: 10px;
-}
-
-/*les titres dans les cartes*/
-.quality-card h4 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #4A4A4A;
-    margin-bottom: 10px;
-}
-
-/*texte dans les cartes*/
-.quality-card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
-}
-
-
-
-/*Langues*/
-/*la meme structure que les qualites*/
-.langues-liste {
-    display: flex; /*structure les elements dans la page*/
-    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
-    justify-content: center; /* Centre les cartes horizontalement */
-    gap: 25px; /* Espace entre les cartes */
-    padding: 20px 0;
-}
-
-.langue-item {
-    background-color: #fff0f2;
-    border: 2px solid #FFC3CB;
-    border-radius: 10px;/*arrondis les cotes*/
-    padding: 25px;
-    width: calc(33.333% - 25px); /* 3 cartes par ligne sur grand écran */
-    min-height: 200px; /* Hauteur minimale pour l'uniformité */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/*nom des langues*/
-.langue-item h4 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #4A4A4A;
-    margin-bottom: 10px;
-}
-
-/*texte explicatif*/
-.langue-item p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5; /*interligne*/
-}
-
-
-
-/*Projets*/
+/* 7. Projets*/
 /*mise en place de la grille pour les projets*/
 .projets-grille {
     display: grid; /*active le mode grille pour mettre en place les projets*/
@@ -790,7 +787,7 @@ input[type="radio"] {
 
 
 
-/* 7. Centres d'interet*/
+/* 8. Centres d'interet*/
 .hobby-liste {
     display: flex;
     flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
@@ -913,7 +910,8 @@ input[name="music-page"] {
 }
 
 
-/*8.  CV*/
+
+/*9.  CV*/
 .download-btn {
     display: inline-block; /*elements restent sur la meme ligne*/
     background: linear-gradient(45deg, #AEC6CF, #97b5be); 
@@ -935,7 +933,7 @@ input[name="music-page"] {
 
 
 
-/* 9. Contact */
+/* 10. Contact */
 /*texte dans l'onglet*/
 .contact-panel p {
     font-size: 17px;
@@ -946,4 +944,48 @@ input[name="music-page"] {
 .contact-panel strong i {
     color: #AEC6CF;
     margin-right: 8px;
+}
+
+/*reseaux sociaux*/
+.social-links {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/*style des liens*/
+.social-links a {
+    font-size: 30px; /* Taille des icônes */
+    color: #AEC6CF;  /* couleur bleu pastel */
+    transition: transform 0.3s ease, color 0.3s ease; /*preparation de l'animation au survol*/
+}
+
+.social-links a:hover {
+    color: #FFC3CB;  /* couleur rose pastel au survol */
+    transform: translateY(-5px); /* animation au survol pour bouger les icones vers le haut */
+}
+
+/*alignement de texte*/
+.social-links p {
+    margin-bottom: 0; /* Aligne le texte avec les icônes */
+}
+
+
+
+/* 11. footer*/
+footer p{
+    margin-bottom: 20px; /*rajoute une marge entre le texte et le bas de la page*/
+}
+
+footer img{
+    width: 45px; /* Taille du logo */
+    height: auto; /*garde les proportions de l'image*/
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: column; /* Aligne le logo et le texte l'un au-dessus de l'autre */
+    align-items: center;    /* Centre horizontalement tous les éléments */
 }
