@@ -152,7 +152,7 @@ nav a:hover::after { /*duo de hover+after - lien et passage entre les deux*/
     gap: 15px; /* Espace entre le logo et le nom */
     width: 100%; /* prend toute la largeur du panneau */
     margin-bottom: 25px; 
-    margin-top: -10px; /*remonte le bloc vers le haut*/
+    margin-top: -20px; /*remonte le bloc vers le haut*/
     padding-top: 23px; /*espace interieur*/
 }
 
