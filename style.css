@@ -133,7 +133,7 @@ nav a:hover::after { /*duo de hover+after - lien et passage entre les deux*/
     align-items: center; /*elements verticalement centres */
     gap: 30px; /*espace entre la photo et le texte*/
     justify-content: center; /*centre le groupe de photo et texte au milieu*/
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /*Nom*/
@@ -164,13 +164,12 @@ nav a:hover::after { /*duo de hover+after - lien et passage entre les deux*/
 
 /*texte dans A propos*/
 .apropos-texte {
-    padding-bottom: 50px; /*espace sous le texte*/
     text-align: justify; /*aligne les bord du texte*/
     max-width: 600px; /*la limite de largeur*/
 }
 
 .apropos-texte p {
-    margin-bottom: 15px; /*espace entre chaque parahraphe*/
+    margin-bottom: 10px; /*espace entre chaque parahraphe*/
 }
 
 /* Le cadre blanc pour la photo et photo*/
