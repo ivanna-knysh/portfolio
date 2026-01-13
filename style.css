@@ -453,7 +453,7 @@ a.lien:hover{
     flex-direction: column; /* Aligne les éléments en colonne */
     align-items: center;    /* Centre tout horizontalement */
     text-align: center;
-    gap: 15px;              /* Espace automatique entre chaque ligne */
+    gap: 15px;              /* Espace entre chaque ligne */
     margin-top: 20px;
 }
 
