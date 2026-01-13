@@ -446,7 +446,21 @@ a.lien:hover{
     color: #666;
     line-height: 1.5; /*interligne*/
 }
+ 
+/*les certificats a telecharger*/
+.certifs-colonne {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center;    /* Centre tout horizontalement */
+    text-align: center;
+    gap: 15px;              /* Espace automatique entre chaque ligne */
+    margin-top: 20px;
+}
 
+.certifs-colonne h4 {
+    margin-top: 25px;       /* Ajoute un plus grand espace avant les titres */
+    margin-bottom: 5px;     /* Rapproche le titre de son bouton */
+}
 
 
 /* 6. Experience */
