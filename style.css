@@ -543,6 +543,7 @@ a.lien:hover{
 
 .detail-content {
     display: none; /* Cache tous les contenus par défaut pour les ouvrir un apres autre*/
+    margin-bottom: 15px; /* Ajoute l'espace comme les br */
 }
 
 /* Toutes les cartes ouvertes une apres l'autre, et si exp-interfolk est coché, affiche content-interfolk */
@@ -567,7 +568,7 @@ a.lien:hover{
 .experience-detail ul li {
     padding-left: 1.5em; /*cree de l'espace*/
     position: relative; /*sert de repere pour les points*/
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 16px;
     color: #4A4A4A;
 }
@@ -658,6 +659,15 @@ input[type="radio"] {
 .page-livre:hover {
     transform: scale(1.9);
 }
+
+.label-title {
+    display: block;
+    font-size: 1.17em; /*la taille d'un h3*/
+    font-weight: bold;
+    margin-top: 10px; /*marges du haut*/
+    margin-bottom: 5px; /*marge du bas*/
+}
+
 
 
 
@@ -824,7 +834,7 @@ input[type="radio"] {
 }
 
 /*titre de hobby*/
-.hobby-item h4 {
+.hobby-item h3 {
     font-size: 20px;
     font-weight: 700;
     color: #4A4A4A;
@@ -1002,3 +1012,10 @@ footer {
     flex-direction: column; /* Aligne le logo et le texte l'un au-dessus de l'autre */
     align-items: center;    /* Centre horizontalement tous les éléments */
 }
+
+
+
+
+
+
+
