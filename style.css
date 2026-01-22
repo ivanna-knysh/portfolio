@@ -174,8 +174,12 @@ nav a:hover::after { /*duo de hover+after - lien et passage entre les deux*/
 
 /* Le cadre blanc pour la photo et photo*/
 .photo-cadre {
-    width: 250px; /*largeur et hauteur du cadre*/
-    height: 350px; 
+    flex-shrink: 0; /* Empêche le cadre de se faire écraser */
+    width: 250px;   /* Taille fixe*/
+    height: auto;
+    display: flex;
+    align-items: center; /*on l'aligne*/
+    justify-content: center;
     border-radius: 15px; /*coins arrondis*/
     border: 5px solid rgb(227, 227, 227); /*bordure blanche epaisse*/
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); /*une ombre transparente*/
@@ -184,6 +188,13 @@ nav a:hover::after { /*duo de hover+after - lien et passage entre les deux*/
 
 .photo-cadre img {
     width: 100%; /*photo occupe 100% du cadre, sinon elle est zoomee*/
+    max-width: 250px;  /* elle ne dépasse pas 250px */
+    height: auto;      /* Garde les proportions */
+    object-fit: cover; /*évite que la photo soit écrasée */
+    flex-shrink: 0; /* Empêche le cadre de se faire écraser */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*texte en bleu fonce dans A propos*/
@@ -1014,8 +1025,57 @@ footer {
 }
 
 
+/*adaptation pour un telephone*/
+@media (max-width: 768px) {
+    /* on empile le header (texte en haut, photo en bas) */
+    .header-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 100px; /* pour ne pas être caché par le menu fixe */
+    }
 
+    /* taille réduite du texte pour les petits écrans */
+    h1 { font-size: 2.5rem; }
+    
+    /*empile les colonnes des compétences et formations */
+    .competences-grid, .formation-item {
+        grid-template-columns: 1fr;
+        display: block;
+    }
 
+    /*adapte la grille des expériences */
+    .experience-grid {
+        grid-template-columns: 1fr; /* Les cartes passent au dessus du détail */
+    }
 
+    .experience-list {
+        display: flex;
+        overflow-x: auto; /* Permet de faire défiler les cartes horizontalement sur mobile */
+        gap: 10px;
+        padding-bottom: 10px;
+    }
 
+    .exp-card {
+        min-width: 200px; /* Taille minimum pour les cartes en défilement */
+    }
 
+    /*empile les hobbies */
+    .hobby-liste {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*ajuste les panneaux pour qu'ils prennent plus de place */
+    .panel {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /*nav scrollable horizontalement */
+    nav ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 10px;
+        white-space: nowrap;
+    }
+}
