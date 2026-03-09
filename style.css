@@ -333,22 +333,22 @@ a.lien:hover{
 
 /* Définition des niveaux de compétence spécifiques */
 .prog-level {
-    width: 60%;
+    width: 98%;
     background-color: #AEC6CF; 
 }
 
 .reseaux-level {
-    width: 25%;
+    width: 80%;
     background-color: #5e8d9e; 
 }
 
 .syst-level {
-    width: 25%;
+    width: 85%;
     background-color: #FFC3CB;
 }
 
 .telecom-level {
-    width: 20%;
+    width: 70%;
     background-color: #AEC6CF; 
 }
 
