@@ -89,9 +89,10 @@ nav a:hover::after { /*duo de hover+after - lien et passage entre les deux*/
 /* 2. Parametres des differentes grandes sections*/
 /*espaces entre les blocs*/
 .espaces {
-    padding-top: 80px; /*espace du haut et du bas de chaque bloc*/
-    padding-bottom: 80px;
+    padding-top: 20px; /*espace du haut et du bas de chaque bloc*/
+    padding-bottom: 20px;
     width: 100%; /*occupe toute la largeur de l'ecran*/
+    padding-inline: 16px;
 }
 
 /* fond blanc de chaque bloc */
@@ -130,6 +131,12 @@ nav a:hover::after { /*duo de hover+after - lien et passage entre les deux*/
 
 
 /* 3. A propos*/
+
+#apropos-panel {
+    margin-top: 80px; /*ajoute un espace entre le haut de la page et le bloc A propos*/
+}
+
+
 .apropos-container {
     display: flex; /*aligne les elements sur une ligne*/
     align-items: center; /*elements verticalement centres */
@@ -299,7 +306,7 @@ a.lien:hover{
 .skills-container {
     display: flex; /*structure de la page en colonnes*/
     flex-direction: column;
-    gap: 25px; /* Espace entre chaque compétence */
+    gap: 10px; /* Espace entre chaque compétence */
     padding: 15px 0;
 }
 
@@ -1092,8 +1099,9 @@ footer {
     }
 
     .espaces {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-inline: 0px;
     }
 
     .panel {
@@ -1112,7 +1120,6 @@ footer {
     }
 
     .header-logo-container {
-        margin-top: 50px;
         margin-bottom: 15px;
         gap: 10px;
     }
@@ -1200,6 +1207,7 @@ footer {
 
     .exp-card {
         min-width: 200px;
+        max-width: 60%;
         flex-shrink: 0;
     }
 
